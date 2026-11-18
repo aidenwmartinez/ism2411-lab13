@@ -24,3 +24,10 @@ big_south = df[(df["region"] == "South") & (df["revenue"] > 1000)]
 
 print("\nSouth orders over $1,000:", len(big_south))
 print(big_south.head())
+
+# Exercise 5: Calculate the price per unit for each order
+df["per_unit"] = df["revenue"] / df["quantity"]
+
+print("\nFirst five orders with price per unit:")
+print(df.head())
+print("Average price per unit:", df["per_unit"].mean())
