@@ -1,3 +1,15 @@
+# Self-Assessment
+#
+# 1. A boolean filter checks each row against a condition.
+#    It keeps the rows where the condition is true.
+#
+# 2. df["revenue"] gives me a Series, which is one column of values.
+#    df[["revenue"]] gives me a DataFrame with one column.
+#    This matters when a function expects a DataFrame.
+#
+# 3. I would choose pandas because I can run the same script on a new
+#    sales file without doing all the filtering and sorting by hand again.
+
 import pandas as pd
 
 df = pd.read_csv("data/retail_sales.csv")
