@@ -31,3 +31,18 @@ df["per_unit"] = df["revenue"] / df["quantity"]
 print("\nFirst five orders with price per unit:")
 print(df.head())
 print("Average price per unit:", df["per_unit"].mean())
+
+# Exercise 6: List the regions and count orders in each one
+print("\nUnique regions:")
+print(df["region"].unique())
+
+print("\nOrders by region:")
+print(df["region"].value_counts())
+
+# Exercise 7: Keep only the region, product, and revenue columns
+selected_columns = df[["region", "product", "revenue"]]
+
+print("\nShape of the selected columns:", selected_columns.shape)
+
+# Exercise 8: Save the full DataFrame to a new CSV
+df.to_csv("data/explored.csv", index=False)
